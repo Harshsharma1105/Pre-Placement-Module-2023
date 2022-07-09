@@ -1,0 +1,18 @@
+class Solution {
+public:
+    void rotate(vector<int>& nums, int k) {
+        vector<int> Store;
+        while(k>=nums.size()){
+            k=k-nums.size();
+        }
+        for(int i=nums.size()-k;i<nums.size();i++){
+            Store.push_back(nums[i]);
+        }
+        for(int i=0;i<nums.size()-k;i++){
+            Store.push_back(nums[i]);
+        }
+        for(int i=0;i<Store.size();i++){
+            nums[i]=Store[i];
+        }
+    }
+};
