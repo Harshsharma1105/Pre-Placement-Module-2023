@@ -1,0 +1,20 @@
+class Solution {
+public
+    void merge(vectorint& nums1, int m, vectorint& nums2, int n) {
+        vectorint Store;
+        for(int i=0;im;i++){
+            Store.push_back(nums1[i]);
+        }
+        
+        for(int i=0;in;i++){
+            Store.push_back(nums2[i]);
+        }
+        
+        for (int i=0;iStore.size();i++){
+            nums1[i]=Store[i];
+        }
+        
+        sort(nums1.begin(),nums1.end());
+
+    }
+};
